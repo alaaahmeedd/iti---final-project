@@ -1,0 +1,528 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <title>Edit User</title>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+
+    <link rel="SHORTCUT ICON" href="https://demo.inilabs.net/school/v4.7/uploads/images/site.png" />
+
+    <link rel="stylesheet" href="https://demo.inilabs.net/school/v4.7/assets/pace/pace.css">
+
+    <script type="text/javascript" src="https://demo.inilabs.net/school/v4.7/assets/inilabs/jquery.min.js"></script>
+    <script type="text/javascript" src="https://demo.inilabs.net/school/v4.7/assets/slimScroll/jquery.slimscroll.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="https://demo.inilabs.net/school/v4.7/assets/toastr/toastr.min.js"></script>
+
+
+    <link href="https://demo.inilabs.net/school/v4.7/assets/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://demo.inilabs.net/school/v4.7/assets/fonts/font-awesome.css" rel="stylesheet">
+
+    <link href="https://demo.inilabs.net/school/v4.7/assets/fonts/icomoon.css" rel="stylesheet">
+
+    <link href="https://demo.inilabs.net/school/v4.7/assets/fonts/ini-icon.css" rel="stylesheet">
+
+    <link href="https://demo.inilabs.net/school/v4.7/assets/datatables/dataTables.bootstrap.css" rel="stylesheet">
+
+    <link id="headStyleCSSLink" href="https://demo.inilabs.net/school/v4.7/assets/inilabs/themes/whiteblue/style.css"
+        rel="stylesheet">
+
+    <link href="https://demo.inilabs.net/school/v4.7/assets/inilabs/hidetable.css" rel="stylesheet">
+
+    <link href="https://demo.inilabs.net/school/v4.7/assets/inilabs/inilabs.css" rel="stylesheet">
+
+    <link id="headInilabsCSSLink"
+        href="https://demo.inilabs.net/school/v4.7/assets/inilabs/themes/whiteblue/inilabs.css" rel="stylesheet">
+
+    <link href="https://demo.inilabs.net/school/v4.7/assets/inilabs/responsive.css" rel="stylesheet">
+
+    <link href="https://demo.inilabs.net/school/v4.7/assets/toastr/toastr.min.css" rel="stylesheet">
+
+    <link href="https://demo.inilabs.net/school/v4.7/assets/inilabs/mailandmedia.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://demo.inilabs.net/school/v4.7/assets/datatables/buttons.dataTables.min.css">
+
+    <link rel="stylesheet" href="https://demo.inilabs.net/school/v4.7/assets/inilabs/combined.css">
+    <link rel="stylesheet" href="https://demo.inilabs.net/school/v4.7/assets/ajaxloder/ajaxloder.css">
+
+    <link rel="stylesheet"
+        href="https://demo.inilabs.net/school/v4.7/assets/fullcalendar/lib/cupertino/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://demo.inilabs.net/school/v4.7/assets/fullcalendar/fullcalendar.css">
+    <script type="text/javascript" src="https://demo.inilabs.net/school/v4.7/assets/highcharts/highcharts.js"></script>
+    <script type="text/javascript"
+        src="https://demo.inilabs.net/school/v4.7/assets/highcharts/highcharts-more.js"></script>
+    <script type="text/javascript" src="https://demo.inilabs.net/school/v4.7/assets/highcharts/data.js"></script>
+    <script type="text/javascript" src="https://demo.inilabs.net/school/v4.7/assets/highcharts/drilldown.js"></script>
+    <script type="text/javascript" src="https://demo.inilabs.net/school/v4.7/assets/highcharts/exporting.js"></script>
+    <script type="text/javascript"
+        src="https://demo.inilabs.net/school/v4.7/assets/fullcalendar/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript"
+        src="https://demo.inilabs.net/school/v4.7/assets/fullcalendar/lib/moment.min.js"></script>
+    <script type="text/javascript"
+        src="https://demo.inilabs.net/school/v4.7/assets/fullcalendar/fullcalendar.min.js"></script>
+
+    <script type="text/javascript">
+        $(window).load(function () {
+            $(".se-pre-con").fadeOut("slow");;
+        });
+    </script>
+</head>
+
+<body class="skin-blue fuelux">
+    <div class="se-pre-con"></div>
+    <div id="loading">
+        <img src="https://demo.inilabs.net/school/v4.7/assets/ajaxloder/loader.gif" width="150" height="150" />
+    </div>
+    <header class="header" style="position:fixed">
+        <a href="" class="logo">
+            My online School </a>
+        <nav class="navbar navbar-static-top" role="navigation">
+          
+
+            <div class="navbar-right">
+                <ul class="nav navbar-nav">
+                  
+                    <li class="dropdown user user-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="https://demo.inilabs.net/school/v4.7/uploads/images/default.png" class="user-logo"
+                                alt="" />
+                            <span>
+                                Admin <i class="caret"></i>
+                            </span>
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li class="user-body">
+                                <div class="col-xs-6 text-center">
+                                    <a href="dashbord.html">
+                                        <div><i class="fa fa-briefcase"></i></div>
+                                        Profile
+                                    </a>
+                                </div>
+                                <div class="col-xs-6 text-center">
+                                    <a href="">
+                                        <div><i class="fa fa-lock"></i></div>
+                                        Password
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="user-footer">
+                                <div class="text-center">
+                                    <a href="">
+                                        <div><i class="fa fa-power-off"></i></div>
+                                        Log out
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="wrapper row-offcanvas row-offcanvas-left">
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="left-side sidebar-offcanvas" style="position: fixed;">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar" >
+                <!-- Sidebar user panel -->
+                <div class="user-panel">
+                    <div class="pull-left image">
+                        <img src="https://demo.inilabs.net/school/v4.7/uploads/images/default.png" class="user-logo">
+                    </div>
+
+                    <div class="pull-left info">
+                        <a href="">
+                            <i class="fa fa-hand-o-right color-green"></i>
+                            Admin </a>
+                    </div>
+                </div>
+
+                <ul class="sidebar-menu" >
+                    <li class=""><a href="dashbord.html"><i class="fa fa-laptop"></i><span>Dashboard</span> </a></li>
+                    <li class=""><a href="student-dash.html">
+                        <i class="fas fa-user-graduate"></i><span> Student</span> </a></li>
+                    <li class=""><a href="parent-dash.html">
+                        <i class="fas fa-male" style="font-size: large;"></i><span>   Parents</span> </a></li>
+                    <li class=""><a href="teacher-dash.html">
+                        <i class="fas fa-chalkboard-teacher"></i><span> Teacher</span> </a></li>
+                    <li class="active"><a href="user-dash.html"><i
+                                class="fa fa-users"></i><span>User</span> </a></li>
+                    <li class="treeview "><a href="">
+                        <i class="fas fa-school"></i><span> Academic</span> <i
+                                class="fa fa-angle-left pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            
+                            <li class=""><a href="subject-dash.html">
+                                <i class="fas fa-book"></i><span> Subject</span> </a></li>
+                            <li class=""><a href="course-dash.html">
+                                <i class="fas fa-laptop-house"></i><span> Courses</span> </a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview "><a href="">
+                        <i class="fas fa-file-word"></i><span> Exam</span> <i
+                                class="fa fa-angle-left pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li class=""><a href="exam-dash.html">
+                                <i class="fas fa-pen-square"></i><span> Exam</span> </a></li>
+                            <li class=""><a href="schedule-dash.html">
+                                <i class="fas fa-clock"></i><span> Exam Schedule</span> </a></li>
+                            <li class=""><a href="grade-dash.html">
+                                <i class="fas fa-chart-line"></i><span> Grade</span> </a></li>
+                            <li class=""><a href="attendance-dash.html">
+                                <i class="fas fa-chair"></i><span> Exam Attendance</span> </a></li>
+                        </ul>
+                    </li>
+              
+                           <li class=""><a href="mail-dash.html">
+                            <i class="fas fa-mail-bulk"></i><span> Mail / SMS</span> </a></li>
+                  
+
+                    <li class="treeview "><a href="">
+                        <i class="fas fa-bullhorn"></i><span> Announcement</span> <i
+                                class="fa fa-angle-left pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li class=""><a href="notice-dash.html">
+                                <i class="fas fa-flag"></i><span> Notice</span> </a></li>
+                            <li class=""><a href="event-dash.html">
+                                <i class="far fa-calendar-alt"></i><span> Event</span> </a></li>
+                            
+                        </ul>
+                    </li>
+                   
+                 
+                          
+                  
+                </ul>
+            </section>
+        <!-- /.sidebar -->
+    </aside>
+        <aside class="right-side" style="margin-top: 3%;">
+            <section class="content">
+                <div class="row">
+                    <div class="col-xs-12">
+                        
+<div class="box">
+    <div class="box-header">
+        <h3 class="box-title"><i class="fa fa-users"></i> User</h3>
+
+
+        <ol class="breadcrumb">
+            <li><a href="dashbord.html"><i class="fa fa-laptop"></i> Dashboard</a></li>
+            <li><a href="user-dash.html">User</a></li>
+            <li class="active">Edit User</li>
+        </ol>
+    </div><!-- /.box-header -->
+    <!-- form start -->
+    <div class="box-body">
+        <div class="row">
+            <div class="col-sm-10">
+                <form class="form-horizontal" role="form" method="post" enctype="multipart/form-data">
+
+                    <div class='form-group' >                        <label for="user_name" class="col-sm-2 control-label">
+                            Name <span class="text-red">*</span>
+                        </label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="name" name="name" value="Abdul khalek" >
+
+                        </div>
+                        <span class="col-sm-4 control-label">
+                                                    </span>
+                    </div>
+
+                    <div class='form-group' >                        <label for="dob" class="col-sm-2 control-label">
+                            Date of Birth <span class="text-red">*</span>
+                        </label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="dob" name="dob" value="10-06-1980" >
+                        </div>
+                        <span class="col-sm-4 control-label">
+                                                    </span>
+                    </div>
+
+                    <div class='form-group' >                        <label for="sex" class="col-sm-2 control-label">
+                            Gender                        </label>
+                        <div class="col-sm-6">
+                            <select name="sex" id='sex' class='form-control'>
+<option value="Male" selected="selected">Male</option>
+<option value="Female">Female</option>
+</select>
+                        </div>
+                        <span class="col-sm-4 control-label">
+                                                    </span>
+                    </div>
+
+                    <div class='form-group' >                        <label for="religion" class="col-sm-2 control-label">
+                            Religion                        </label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="religion" name="religion" value="islam" >
+                        </div>
+                        <span class="col-sm-4 control-label">
+                                                    </span>
+                    </div>
+
+                    <div class='form-group' >                        <label for="email" class="col-sm-2 control-label">
+                            Email <span class="text-red">*</span>
+                        </label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="email" name="email" value="abdul@gmail.com" >
+                        </div>
+                        <span class="col-sm-4 control-label">
+                                                    </span>
+                    </div>
+
+                    <div class='form-group' >                        <label for="phone" class="col-sm-2 control-label">
+                            Phone                        </label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="phone" name="phone" value="012545588988" >
+                        </div>
+                        <span class="col-sm-4 control-label">
+                                                    </span>
+                    </div>
+
+                    <div class='form-group' >                        <label for="address" class="col-sm-2 control-label">
+                            Address                        </label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="address" name="address" value="Dhaka Mirpur 2" >
+                        </div>
+                        <span class="col-sm-4 control-label">
+                                                    </span>
+                    </div>
+
+                    <div class='form-group' >                        <label for="jod" class="col-sm-2 control-label">
+                            Joining Date <span class="text-red">*</span>
+                        </label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="jod" name="jod" value="07-09-2020" >
+                        </div>
+                        <span class="col-sm-4 control-label">
+                                                    </span>
+                    </div>
+
+                    <div class='form-group' >                        <label for="photo" class="col-sm-2 control-label">
+                            Photo                        </label>
+                        <div class="col-sm-6">
+                            <div class="input-group image-preview">
+                                <input type="text" class="form-control image-preview-filename" disabled="disabled">
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
+                                        <span class="fa fa-remove"></span>
+                                        Clear                                    </button>
+                                    <div class="btn btn-success image-preview-input">
+                                        <span class="fa fa-repeat"></span>
+                                        <span class="image-preview-input-title">
+                                        File Browse                                        </span>
+                                        <input type="file" accept="image/png, image/jpeg, image/gif" name="photo"/>
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+
+                        <span class="col-sm-4">
+                                                    </span>
+                    </div>
+
+                    <div class='form-group' >                        <label for="usertypeID" class="col-sm-2 control-label">
+                            Role <span class="text-red">*</span>
+                        </label>
+                        
+                        <div class="col-sm-6">
+                            <select name="usertypeID" id='usertypeID' class='form-control'>
+<option value="0">Select Role</option>
+<option value="8">Moderator</option>
+<option value="7">Receptionist</option>
+<option value="6" selected="selected">Librarian</option>
+<option value="5">Accountant</option>
+</select>
+                        </div>
+                        <span class="col-sm-4 control-label">
+                                                    </span>
+                    </div>
+
+                    <div class='form-group' >                        <label for="username" class="col-sm-2 control-label">
+                            Username <span class="text-red">*</span>
+                        </label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="username" name="username" value="librarian" >
+                        </div>
+                         <span class="col-sm-4 control-label">
+                                                    </span>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-8">
+                            <input type="submit" class="btn btn-success" value="Update User" >
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$('#username').keyup(function() {
+    $(this).val($(this).val().replace(/\s/g, ''));
+});
+
+$('#dob').datepicker({ startView: 2 });
+$('#jod').datepicker({ dateFormat : 'dd-mm-yyyy' });
+
+$(document).on('click', '#close-preview', function(){ 
+    $('.image-preview').popover('hide');
+    // Hover befor close the preview
+    $('.image-preview').hover(
+        function () {
+           $('.image-preview').popover('show');
+           $('.content').css('padding-bottom', '100px');
+        }, 
+         function () {
+           $('.image-preview').popover('hide');
+           $('.content').css('padding-bottom', '20px');
+        }
+    );    
+});
+
+$(function() {
+    // Create the close button
+    var closebtn = $('<button/>', {
+        type:"button",
+        text: 'x',
+        id: 'close-preview',
+        style: 'font-size: initial;',
+    });
+    closebtn.attr("class","close pull-right");
+    // Set the popover default content
+    $('.image-preview').popover({
+        trigger:'manual',
+        html:true,
+        title: "<strong>Preview</strong>"+$(closebtn)[0].outerHTML,
+        content: "There's no image",
+        placement:'bottom'
+    });
+    // Clear event
+    $('.image-preview-clear').click(function(){
+        $('.image-preview').attr("data-content","").popover('hide');
+        $('.image-preview-filename').val("");
+        $('.image-preview-clear').hide();
+        $('.image-preview-input input:file').val("");
+        $(".image-preview-input-title").text("File Browse"); 
+    }); 
+    // Create the preview image
+    $(".image-preview-input input:file").change(function (){     
+        var img = $('<img/>', {
+            id: 'dynamic',
+            width:250,
+            height:200,
+            overflow:'hidden'
+        });      
+        var file = this.files[0];
+        var reader = new FileReader();
+        // Set preview image into the popover data-content
+        reader.onload = function (e) {
+            $(".image-preview-input-title").text("File Browse");
+            $(".image-preview-clear").show();
+            $(".image-preview-filename").val(file.name);            
+            img.attr('src', e.target.result);
+            $(".image-preview").attr("data-content",$(img)[0].outerHTML).popover("show");
+            $('.content').css('padding-bottom', '100px');
+        }        
+        reader.readAsDataURL(file);
+    });  
+});
+
+
+</script>                    </div>
+                </div>
+            </section>
+        </aside>
+
+        <footer class="main-footer">
+          	<div class="pull-right hidden-xs">
+                     	</div>
+          	<strong>Copyright &copy; </strong>
+        </footer>
+        </div>
+        <script type="text/javascript" src="https://demo.inilabs.net/school/v4.7/assets/bootstrap/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://demo.inilabs.net/school/v4.7/assets/inilabs/style.js"></script>
+        <script type="text/javascript" src="https://demo.inilabs.net/school/v4.7/assets/datatables/tools/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="https://demo.inilabs.net/school/v4.7/assets/datatables/tools/dataTables.buttons.min.js"></script>
+        <script type="text/javascript" src="https://demo.inilabs.net/school/v4.7/assets/datatables/tools/jszip.min.js"></script>
+        <script type="text/javascript" src="https://demo.inilabs.net/school/v4.7/assets/datatables/tools/pdfmake.min.js"></script>
+        <script type="text/javascript" src="https://demo.inilabs.net/school/v4.7/assets/datatables/tools/vfs_fonts.js"></script>
+        <script type="text/javascript" src="https://demo.inilabs.net/school/v4.7/assets/datatables/tools/buttons.html5.min.js"></script>
+        <script type="text/javascript" src="https://demo.inilabs.net/school/v4.7/assets/datatables/dataTables.bootstrap.js"></script>
+        <script type="text/javascript" src="https://demo.inilabs.net/school/v4.7/assets/inilabs/inilabs.js"></script>
+        <script type="text/javascript">
+          $(document).ready(function () {
+            $(document).ajaxStart(function () {
+              $("#loading").show();
+            }).ajaxStop(function () {
+              $("#loading").hide();
+            });
+          });
+
+          $(document).ready(function () {
+            $('#example3, #example1, #example2').DataTable({
+              dom : 'Bfrtip',
+              buttons : [
+                'copyHtml5',
+                'excelHtml5',
+                'csvHtml5',
+                'pdfHtml5'
+              ],
+              search : false
+            });
+          });
+        </script>
+
+        <script type="text/javascript">
+          $(function () {
+            $("#withoutBtn").dataTable();
+          });
+        </script>
+
+                
+                
+        <script type="text/javascript">
+            $("ul.sidebar-menu li").each(function() {
+                if($(this).attr('class') === 'active') {
+                    $(this).parents('li').addClass('active');
+                }
+            });
+
+            $(document).ready(function () {
+              setTimeout(function () {
+                $.ajax({
+                  type : 'GET',
+                  dataType : "html",
+                  async : false,
+                  url : "https://demo.inilabs.net/school/v4.7/alert/alert",
+                  success : function (data) {
+                    $(".my-push-message-list").html(data);
+                    var alertNumber = 0;
+                    $('.my-push-message-list li').each(function () {
+                      alertNumber++;
+                    });
+                    if (alertNumber > 0) {
+                      $('.my-push-message-ul').removeAttr('style');
+                      $('.my-push-message-a').append('<span class="label label-danger"><lable class="alert-image">' + alertNumber + '</lable> </span>');
+                      $('.my-push-message-number').html('You have ' + alertNumber + ' notifications');
+                    } else {
+                      $('.my-push-message-ul').remove();
+                    }
+                  }
+                });
+              }, 5000);
+            });
+        </script>
+    </body>
+</html>
+
+

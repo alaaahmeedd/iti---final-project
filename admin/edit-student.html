@@ -1,0 +1,920 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <title>Edit Student</title>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+
+    <link rel="SHORTCUT ICON" href="https://demo.inilabs.net/school/v4.7/uploads/images/site.png" />
+
+    <link rel="stylesheet" href="https://demo.inilabs.net/school/v4.7/assets/pace/pace.css">
+
+    <script type="text/javascript" src="https://demo.inilabs.net/school/v4.7/assets/inilabs/jquery.min.js"></script>
+    <script type="text/javascript" src="https://demo.inilabs.net/school/v4.7/assets/slimScroll/jquery.slimscroll.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="https://demo.inilabs.net/school/v4.7/assets/toastr/toastr.min.js"></script>
+
+
+    <link href="https://demo.inilabs.net/school/v4.7/assets/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://demo.inilabs.net/school/v4.7/assets/fonts/font-awesome.css" rel="stylesheet">
+
+    <link href="https://demo.inilabs.net/school/v4.7/assets/fonts/icomoon.css" rel="stylesheet">
+
+    <link href="https://demo.inilabs.net/school/v4.7/assets/fonts/ini-icon.css" rel="stylesheet">
+
+    <link href="https://demo.inilabs.net/school/v4.7/assets/datatables/dataTables.bootstrap.css" rel="stylesheet">
+
+    <link id="headStyleCSSLink" href="https://demo.inilabs.net/school/v4.7/assets/inilabs/themes/whiteblue/style.css"
+        rel="stylesheet">
+
+    <link href="https://demo.inilabs.net/school/v4.7/assets/inilabs/hidetable.css" rel="stylesheet">
+
+    <link href="https://demo.inilabs.net/school/v4.7/assets/inilabs/inilabs.css" rel="stylesheet">
+
+    <link id="headInilabsCSSLink"
+        href="https://demo.inilabs.net/school/v4.7/assets/inilabs/themes/whiteblue/inilabs.css" rel="stylesheet">
+
+    <link href="https://demo.inilabs.net/school/v4.7/assets/inilabs/responsive.css" rel="stylesheet">
+
+    <link href="https://demo.inilabs.net/school/v4.7/assets/toastr/toastr.min.css" rel="stylesheet">
+
+    <link href="https://demo.inilabs.net/school/v4.7/assets/inilabs/mailandmedia.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://demo.inilabs.net/school/v4.7/assets/datatables/buttons.dataTables.min.css">
+
+    <link rel="stylesheet" href="https://demo.inilabs.net/school/v4.7/assets/inilabs/combined.css">
+    <link rel="stylesheet" href="https://demo.inilabs.net/school/v4.7/assets/ajaxloder/ajaxloder.css">
+
+    <link rel="stylesheet"
+        href="https://demo.inilabs.net/school/v4.7/assets/fullcalendar/lib/cupertino/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://demo.inilabs.net/school/v4.7/assets/fullcalendar/fullcalendar.css">
+    <script type="text/javascript" src="https://demo.inilabs.net/school/v4.7/assets/highcharts/highcharts.js"></script>
+    <script type="text/javascript"
+        src="https://demo.inilabs.net/school/v4.7/assets/highcharts/highcharts-more.js"></script>
+    <script type="text/javascript" src="https://demo.inilabs.net/school/v4.7/assets/highcharts/data.js"></script>
+    <script type="text/javascript" src="https://demo.inilabs.net/school/v4.7/assets/highcharts/drilldown.js"></script>
+    <script type="text/javascript" src="https://demo.inilabs.net/school/v4.7/assets/highcharts/exporting.js"></script>
+    <script type="text/javascript"
+        src="https://demo.inilabs.net/school/v4.7/assets/fullcalendar/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript"
+        src="https://demo.inilabs.net/school/v4.7/assets/fullcalendar/lib/moment.min.js"></script>
+    <script type="text/javascript"
+        src="https://demo.inilabs.net/school/v4.7/assets/fullcalendar/fullcalendar.min.js"></script>
+
+    <script type="text/javascript">
+        $(window).load(function () {
+            $(".se-pre-con").fadeOut("slow");;
+        });
+    </script>
+</head>
+
+<body class="skin-blue fuelux">
+    <div class="se-pre-con"></div>
+    <div id="loading">
+        <img src="https://demo.inilabs.net/school/v4.7/assets/ajaxloder/loader.gif" width="150" height="150" />
+    </div>
+    <header class="header" style="position:fixed">
+        <a href="" class="logo">
+            My online School </a>
+        <nav class="navbar navbar-static-top" role="navigation">
+          
+
+            <div class="navbar-right">
+                <ul class="nav navbar-nav">
+                  
+                    <li class="dropdown user user-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="https://demo.inilabs.net/school/v4.7/uploads/images/default.png" class="user-logo"
+                                alt="" />
+                            <span>
+                                Admin <i class="caret"></i>
+                            </span>
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li class="user-body">
+                                <div class="col-xs-6 text-center">
+                                    <a href="dashbord.html">
+                                        <div><i class="fa fa-briefcase"></i></div>
+                                        Profile
+                                    </a>
+                                </div>
+                                <div class="col-xs-6 text-center">
+                                    <a href="">
+                                        <div><i class="fa fa-lock"></i></div>
+                                        Password
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="user-footer">
+                                <div class="text-center">
+                                    <a href="">
+                                        <div><i class="fa fa-power-off"></i></div>
+                                        Log out
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="wrapper row-offcanvas row-offcanvas-left">
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="left-side sidebar-offcanvas" style="position: fixed;">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar" >
+                <!-- Sidebar user panel -->
+                <div class="user-panel">
+                    <div class="pull-left image">
+                        <img src="https://demo.inilabs.net/school/v4.7/uploads/images/default.png" class="user-logo">
+                    </div>
+
+                    <div class="pull-left info">
+                        <a href="">
+                            <i class="fa fa-hand-o-right color-green"></i>
+                            Admin </a>
+                    </div>
+                </div>
+
+                <ul class="sidebar-menu" >
+                    <li class=""><a href="dashbord.html"><i class="fa fa-laptop"></i><span>Dashboard</span> </a></li>
+                    <li class="active"><a href="student-dash.html">
+                        <i class="fas fa-user-graduate"></i><span> Student</span> </a></li>
+                    <li class=""><a href="parent-dash.html">
+                        <i class="fas fa-male" style="font-size: large;"></i><span>   Parents</span> </a></li>
+                    <li class=""><a href="teacher-dash.html">
+                        <i class="fas fa-chalkboard-teacher"></i><span> Teacher</span> </a></li>
+                    <li class=""><a href="user-dash.html"><i
+                                class="fa fa-users"></i><span>User</span> </a></li>
+                    <li class="treeview "><a href="">
+                        <i class="fas fa-school"></i><span> Academic</span> <i
+                                class="fa fa-angle-left pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            
+                            <li class=""><a href="subject-dash.html">
+                                <i class="fas fa-book"></i><span> Subject</span> </a></li>
+                            <li class=""><a href="course-dash.html">
+                                <i class="fas fa-laptop-house"></i><span> Courses</span> </a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview "><a href="">
+                        <i class="fas fa-file-word"></i><span> Exam</span> <i
+                                class="fa fa-angle-left pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li class=""><a href="exam-dash.html">
+                                <i class="fas fa-pen-square"></i><span> Exam</span> </a></li>
+                            <li class=""><a href="schedule-dash.html">
+                                <i class="fas fa-clock"></i><span> Exam Schedule</span> </a></li>
+                            <li class=""><a href="grade-dash.html">
+                                <i class="fas fa-chart-line"></i><span> Grade</span> </a></li>
+                            <li class=""><a href="attendance-dash.html">
+                                <i class="fas fa-chair"></i><span> Exam Attendance</span> </a></li>
+                        </ul>
+                    </li>
+              
+                           <li class=""><a href="mail-dash.html">
+                            <i class="fas fa-mail-bulk"></i><span> Mail / SMS</span> </a></li>
+                  
+
+                    <li class="treeview "><a href="">
+                        <i class="fas fa-bullhorn"></i><span> Announcement</span> <i
+                                class="fa fa-angle-left pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li class=""><a href="notice-dash.html">
+                                <i class="fas fa-flag"></i><span> Notice</span> </a></li>
+                            <li class=""><a href="event-dash.html">
+                                <i class="far fa-calendar-alt"></i><span> Event</span> </a></li>
+                            
+                        </ul>
+                    </li>
+                   
+                 
+                          
+                  
+                </ul>
+            </section>
+        <!-- /.sidebar -->
+    </aside>
+        <aside class="right-side"style="margin-top:3%">
+            <section class="content">
+                <div class="row">
+                    <div class="col-xs-12">
+                        
+<div class="box">
+    <div class="box-header">
+        <h3 class="box-title"><i class="fa icon-student"></i> Student</h3>
+
+       
+        <ol class="breadcrumb">
+            <li><a href="dashbord.html"><i class="fa fa-laptop"></i> Dashboard</a></li>
+            <li><a href="student-dash.html">Student</a></li>
+            <li class="active">Edit Student</li>
+        </ol>
+    </div><!-- /.box-header -->
+    <!-- form start -->
+    <div class="box-body">
+        <div class="row">
+            <div class="col-sm-10">
+
+                <form class="form-horizontal" role="form" method="post" enctype="multipart/form-data">
+                   
+                    <div class='form-group' >                        <label for="name_id" class="col-sm-2 control-label">
+                            Name <span class="text-red">*</span>
+                        </label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="name_id" name="name" value="Tamim Iqbal" >
+                        </div>
+                        <span class="col-sm-4 control-label">
+                                                    </span>
+                    </div>
+
+                    <div class='form-group' >                   
+                    </div>
+
+                    <div class='form-group' >                        <label for="dob" class="col-sm-2 control-label">
+                            Date of Birth                        </label>
+                        <div class="col-sm-6">
+                                                        <input type="text" class="form-control" id="dob" name="dob" value="02-02-2010" >
+                        </div>
+                        <span class="col-sm-4 control-label">
+                                                    </span>
+                    </div>
+
+                    <div class='form-group' >                        <label for="sex" class="col-sm-2 control-label">
+                            Gender                        </label>
+                        <div class="col-sm-6">
+                            <select name="sex" id='sex' class='form-control'>
+<option value="Male" selected="selected">Male</option>
+<option value="Female">Female</option>
+</select>
+                        </div>
+                        <span class="col-sm-4 control-label">
+                                                    </span>
+
+                    </div>
+
+                    <div class='form-group' >                        <label for="bloodgroup" class="col-sm-2 control-label">
+                            Blood Group                        </label>
+                        <div class="col-sm-6">
+                            <select name="bloodgroup" id='bloodgroup' class='form-control select2'>
+<option value="0">Select Blood Group</option>
+<option value="A+" selected="selected">A+</option>
+<option value="A-">A-</option>
+<option value="B+">B+</option>
+<option value="B-">B-</option>
+<option value="O+">O+</option>
+<option value="O-">O-</option>
+<option value="AB+">AB+</option>
+<option value="AB-">AB-</option>
+</select>
+                        </div>
+                        <span class="col-sm-4 control-label">
+                                                    </span>
+                    </div>
+
+                   
+                    <div class='form-group' >                        <label for="religion" class="col-sm-2 control-label">
+                            Religion                        </label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="religion" name="religion" value="Islam" >
+                        </div>
+                        <span class="col-sm-4 control-label">
+                                                    </span>
+                    </div>
+
+                    <div class='form-group' >                        <label for="email" class="col-sm-2 control-label">
+                            Email                        </label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="email" name="email" value="tamim1@inilabs.net" >
+                        </div>
+                        <span class="col-sm-4 control-label">
+                                                    </span>
+                    </div>
+
+                    <div class='form-group' >                        <label for="phone" class="col-sm-2 control-label">
+                            Phone                        </label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="phone" name="phone" value="123456" >
+                        </div>
+                        <span class="col-sm-4 control-label">
+                                                    </span>
+                    </div>
+
+                    <div class='form-group' >                        <label for="address" class="col-sm-2 control-label">
+                            Address                        </label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="address" name="address" value="Mirpur, Dhaka" >
+                        </div>
+                        <span class="col-sm-4 control-label">
+                                                    </span>
+                    </div>
+
+                    <div class='form-group' >                       
+                    </div>
+
+                    <div class='form-group' >                        <label for="country" class="col-sm-2 control-label">
+                            Country                        </label>
+                        <div class="col-sm-6">
+                                                        <select name="country" id='country' class='form-control select2'>
+<option value="0">Select Country</option>
+<option value="AF">Afghanistan</option>
+<option value="AL">Albania</option>
+<option value="DZ">Algeria</option>
+<option value="AS">American Samoa</option>
+<option value="AD">Andorra</option>
+<option value="AO">Angola</option>
+<option value="AI">Anguilla</option>
+<option value="AQ">Antarctica</option>
+<option value="AG">Antigua and Barbuda</option>
+<option value="AR">Argentina</option>
+<option value="AM">Armenia</option>
+<option value="AW">Aruba</option>
+<option value="AU">Australia</option>
+<option value="AT">Austria</option>
+<option value="AZ">Azerbaijan</option>
+<option value="BS">Bahamas</option>
+<option value="BH">Bahrain</option>
+<option value="BD" selected="selected">Bangladesh</option>
+<option value="BB">Barbados</option>
+<option value="BY">Belarus</option>
+<option value="BE">Belgium</option>
+<option value="BZ">Belize</option>
+<option value="BJ">Benin</option>
+<option value="BM">Bermuda</option>
+<option value="BT">Bhutan</option>
+<option value="BO">Bolivia</option>
+<option value="BA">Bosnia and Herzegovina</option>
+<option value="BW">Botswana</option>
+<option value="BV">Bouvet Island</option>
+<option value="BQ">British Antarctic Territory</option>
+<option value="IO">British Indian Ocean Territory</option>
+<option value="VG">British Virgin Islands</option>
+<option value="BN">Brunei</option>
+<option value="BG">Bulgaria</option>
+<option value="BF">Burkina Faso</option>
+<option value="BI">Burundi</option>
+<option value="KH">Cambodia</option>
+<option value="CM">Cameroon</option>
+<option value="CA">Canada</option>
+<option value="CT">Canton and Enderbury Islands</option>
+<option value="BR">Brazil</option>
+<option value="CV">Cape Verde</option>
+<option value="KY">Cayman Islands</option>
+<option value="CF">Central African Republic</option>
+<option value="TD">Chad</option>
+<option value="CL">Chile</option>
+<option value="CN">China</option>
+<option value="CX">Christmas Island</option>
+<option value="CC">Cocos [Keeling] Islands</option>
+<option value="CO">Colombia</option>
+<option value="KM">Comoros</option>
+<option value="CG">Congo - Brazzaville</option>
+<option value="CD">Congo - Kinshasa</option>
+<option value="CK">Cook Islands</option>
+<option value="CR">Costa Rica</option>
+<option value="HR">Croatia</option>
+<option value="CU">Cuba</option>
+<option value="CY">Cyprus</option>
+<option value="CZ">Czech Republic</option>
+<option value="CI">Côte d’Ivoire</option>
+<option value="DK">Denmark</option>
+<option value="DJ">Djibouti</option>
+<option value="DM">Dominica</option>
+<option value="DO">Dominican Republic</option>
+<option value="NQ">Dronning Maud Land</option>
+<option value="DD">East Germany</option>
+<option value="EC">Ecuador</option>
+<option value="EG">Egypt</option>
+<option value="SV">El Salvador</option>
+<option value="GQ">Equatorial Guinea</option>
+<option value="ER">Eritrea</option>
+<option value="EE">Estonia</option>
+<option value="ET">Ethiopia</option>
+<option value="FK">Falkland Islands</option>
+<option value="FO">Faroe Islands</option>
+<option value="FJ">Fiji</option>
+<option value="FI">Finland</option>
+<option value="FR">France</option>
+<option value="GF">French Guiana</option>
+<option value="PF">French Polynesia</option>
+<option value="TF">French Southern Territories</option>
+<option value="FQ">French Southern and Antarctic Territories</option>
+<option value="GA">Gabon</option>
+<option value="GM">Gambia</option>
+<option value="GE">Georgia</option>
+<option value="DE">Germany</option>
+<option value="GH">Ghana</option>
+<option value="GI">Gibraltar</option>
+<option value="GR">Greece</option>
+<option value="GL">Greenland</option>
+<option value="GD">Grenada</option>
+<option value="GP">Guadeloupe</option>
+<option value="GU">Guam</option>
+<option value="GT">Guatemala</option>
+<option value="GG">Guernsey</option>
+<option value="GN">Guinea</option>
+<option value="GW">Guinea-Bissau</option>
+<option value="GY">Guyana</option>
+<option value="HT">Haiti</option>
+<option value="HM">Heard Island and McDonald Islands</option>
+<option value="HN">Honduras</option>
+<option value="HK">Hong Kong SAR China</option>
+<option value="HU">Hungary</option>
+<option value="IS">Iceland</option>
+<option value="IN">India</option>
+<option value="ID">Indonesia</option>
+<option value="IR">Iran</option>
+<option value="IQ">Iraq</option>
+<option value="IE">Ireland</option>
+<option value="IM">Isle of Man</option>
+<option value="IL">Israel</option>
+<option value="IT">Italy</option>
+<option value="JM">Jamaica</option>
+<option value="JP">Japan</option>
+<option value="JE">Jersey</option>
+<option value="JT">Johnston Island</option>
+<option value="JO">Jordan</option>
+<option value="KZ">Kazakhstan</option>
+<option value="KE">Kenya</option>
+<option value="KI">Kiribati</option>
+<option value="KW">Kuwait</option>
+<option value="KG">Kyrgyzstan</option>
+<option value="LA">Laos</option>
+<option value="LV">Latvia</option>
+<option value="LB">Lebanon</option>
+<option value="LS">Lesotho</option>
+<option value="LR">Liberia</option>
+<option value="LY">Libya</option>
+<option value="LI">Liechtenstein</option>
+<option value="LT">Lithuania</option>
+<option value="LU">Luxembourg</option>
+<option value="MO">Macau SAR China</option>
+<option value="MK">Macedonia</option>
+<option value="MG">Madagascar</option>
+<option value="MW">Malawi</option>
+<option value="MY">Malaysia</option>
+<option value="MV">Maldives</option>
+<option value="ML">Mali</option>
+<option value="MT">Malta</option>
+<option value="MH">Marshall Islands</option>
+<option value="MQ">Martinique</option>
+<option value="MR">Mauritania</option>
+<option value="MU">Mauritius</option>
+<option value="YT">Mayotte</option>
+<option value="FX">Metropolitan France</option>
+<option value="MX">Mexico</option>
+<option value="FM">Micronesia</option>
+<option value="MI">Midway Islands</option>
+<option value="MD">Moldova</option>
+<option value="MC">Monaco</option>
+<option value="MN">Mongolia</option>
+<option value="ME">Montenegro</option>
+<option value="MS">Montserrat</option>
+<option value="MA">Morocco</option>
+<option value="MZ">Mozambique</option>
+<option value="MM">Myanmar [Burma]</option>
+<option value="NA">Namibia</option>
+<option value="NR">Nauru</option>
+<option value="NP">Nepal</option>
+<option value="NL">Netherlands</option>
+<option value="AN">Netherlands Antilles</option>
+<option value="NT">Neutral Zone</option>
+<option value="NC">New Caledonia</option>
+<option value="NZ">New Zealand</option>
+<option value="NI">Nicaragua</option>
+<option value="NE">Niger</option>
+<option value="NG">Nigeria</option>
+<option value="NU">Niue</option>
+<option value="NF">Norfolk Island</option>
+<option value="KP">North Korea</option>
+<option value="VD">North Vietnam</option>
+<option value="MP">Northern Mariana Islands</option>
+<option value="NO">Norway</option>
+<option value="OM">Oman</option>
+<option value="PC">Pacific Islands Trust Territory</option>
+<option value="PK">Pakistan</option>
+<option value="PW">Palau</option>
+<option value="PS">Palestinian Territories</option>
+<option value="PA">Panama</option>
+<option value="PZ">Panama Canal Zone</option>
+<option value="PG">Papua New Guinea</option>
+<option value="PY">Paraguay</option>
+<option value="YD">People's Democratic Republic of Yemen</option>
+<option value="PE">Peru</option>
+<option value="PH">Philippines</option>
+<option value="PN">Pitcairn Islands</option>
+<option value="PL">Poland</option>
+<option value="PT">Portugal</option>
+<option value="PR">Puerto Rico</option>
+<option value="QA">Qatar</option>
+<option value="RO">Romania</option>
+<option value="RU">Russia</option>
+<option value="RW">Rwanda</option>
+<option value="RE">Réunion</option>
+<option value="BL">Saint Barthélemy</option>
+<option value="SH">Saint Helena</option>
+<option value="KN">Saint Kitts and Nevis</option>
+<option value="LC">Saint Lucia</option>
+<option value="MF">Saint Martin</option>
+<option value="PM">Saint Pierre and Miquelon</option>
+<option value="VC">Saint Vincent and the Grenadines</option>
+<option value="WS">Samoa</option>
+<option value="SM">San Marino</option>
+<option value="SA">Saudi Arabia</option>
+<option value="SN">Senegal</option>
+<option value="RS">Serbia</option>
+<option value="CS">Serbia and Montenegro</option>
+<option value="SC">Seychelles</option>
+<option value="SL">Sierra Leone</option>
+<option value="SG">Singapore</option>
+<option value="SK">Slovakia</option>
+<option value="SI">Slovenia</option>
+<option value="SB">Solomon Islands</option>
+<option value="SO">Somalia</option>
+<option value="ZA">South Africa</option>
+<option value="GS">South Georgia and the South Sandwich Islands</option>
+<option value="KR">South Korea</option>
+<option value="ES">Spain</option>
+<option value="LK">Sri Lanka</option>
+<option value="SD">Sudan</option>
+<option value="SR">Suriname</option>
+<option value="SJ">Svalbard and Jan Mayen</option>
+<option value="SZ">Swaziland</option>
+<option value="SE">Sweden</option>
+<option value="CH">Switzerland</option>
+<option value="SY">Syria</option>
+<option value="ST">São Tomé and Príncipe</option>
+<option value="TW">Taiwan</option>
+<option value="TJ">Tajikistan</option>
+<option value="TZ">Tanzania</option>
+<option value="TH">Thailand</option>
+<option value="TL">Timor-Leste</option>
+<option value="TG">Togo</option>
+<option value="TK">Tokelau</option>
+<option value="TO">Tonga</option>
+<option value="TT">Trinidad and Tobago</option>
+<option value="TN">Tunisia</option>
+<option value="TR">Turkey</option>
+<option value="TM">Turkmenistan</option>
+<option value="TC">Turks and Caicos Islands</option>
+<option value="TV">Tuvalu</option>
+<option value="UM">U.S. Minor Outlying Islands</option>
+<option value="PU">U.S. Miscellaneous Pacific Islands</option>
+<option value="VI">U.S. Virgin Islands</option>
+<option value="UG">Uganda</option>
+<option value="UA">Ukraine</option>
+<option value="SU">Union of Soviet Socialist Republics</option>
+<option value="AE">United Arab Emirates</option>
+<option value="GB">United Kingdom</option>
+<option value="US">United States</option>
+<option value="ZZ">Unknown or Invalid Region</option>
+<option value="UY">Uruguay</option>
+<option value="UZ">Uzbekistan</option>
+<option value="VU">Vanuatu</option>
+<option value="VA">Vatican City</option>
+<option value="VE">Venezuela</option>
+<option value="VN">Vietnam</option>
+<option value="WK">Wake Island</option>
+<option value="WF">Wallis and Futuna</option>
+<option value="EH">Western Sahara</option>
+<option value="YE">Yemen</option>
+<option value="ZM">Zambia</option>
+<option value="ZW">Zimbabwe</option>
+<option value="AX">Åland Islands</option>
+</select>
+                        </div>
+                        <span class="col-sm-4 control-label">
+                                                    </span>
+                    </div>
+
+                    <div class='form-group' >                        <label for="classesID" class="col-sm-2 control-label">
+                            Class <span class="text-red">*</span>
+                        </label>
+                        <div class="col-sm-6">
+                            <select name="classesID" id='classesID' class='form-control select2'>
+<option value="0">Select Class</option>
+<option value="1" selected="selected">One</option>
+<option value="2">Two</option>
+<option value="3">Three</option>
+<option value="4">Four</option>
+<option value="5">Five</option>
+<option value="6">Graduate</option>
+</select>
+                        </div>
+                        <span class="col-sm-4 control-label">
+                                                    </span>
+                    </div>
+
+                    <div class='form-group' >                        <label for="sectionID" class="col-sm-2 control-label">
+                            Section <span class="text-red">*</span>
+                        </label>
+                        <div class="col-sm-6">
+                            <select name="sectionID" id='sectionID' class='form-control select2'>
+<option value="0">Select Section</option>
+<option value="1" selected="selected">A</option>
+<option value="2">B</option>
+<option value="3">C</option>
+</select>
+                        </div>
+                        <span class="col-sm-4 control-label">
+                                                    </span>
+                    </div>
+
+                    <div class="form-group ">
+                        <label for="studentGroupID" class="col-sm-2 control-label">
+                            Group                        </label>
+                        <div class="col-sm-6">
+                            <select name="studentGroupID" id='studentGroupID' class='form-control select2'>
+<option value="0" selected="selected">Select Group</option>
+<option value="1">Science</option>
+<option value="2">Commerce</option>
+<option value="3">Arts</option>
+</select>
+                        </div>
+                        <span class="col-sm-4 control-label">
+                                                    </span>
+                    </div>
+
+                    <div class="form-group ">
+                        <label for="optionalSubjectID" class="col-sm-2 control-label">
+                            Optional Subject                        </label>
+                        <div class="col-sm-6">
+                            <select name="optionalSubjectID" id='optionalSubjectID' class='form-control select2'>
+<option value="0" selected="selected">Select Optional Subject</option>
+<option value="9">Drawing</option>
+<option value="10">Since</option>
+</select>
+                        </div>
+                        <span class="col-sm-4 control-label">
+                                                    </span>
+                    </div>
+
+                    <div class='form-group' >                        <label for="registerNO" class="col-sm-2 control-label">
+                            Register NO <span class="text-red">*</span>
+                        </label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="registerNO" name="registerNO" value="INI101" >
+                        </div>
+                        <span class="col-sm-4 control-label">
+                                                    </span>
+                    </div>
+
+                    <div class='form-group' >                        <label for="roll" class="col-sm-2 control-label">
+                            Roll <span class="text-red">*</span>
+                        </label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="roll" name="roll" value="1" >
+                        </div>
+                        <span class="col-sm-4 control-label">
+                                                    </span>
+                    </div>
+
+                    <div class='form-group' >                        <label for="photo" class="col-sm-2 control-label">
+                            Photo                        </label>
+                        <div class="col-sm-6">
+                            <div class="input-group image-preview">
+                                <input type="text" class="form-control image-preview-filename" disabled="disabled">
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
+                                        <span class="fa fa-remove"></span>
+                                        Clear                                    </button>
+                                    <div class="btn btn-success image-preview-input">
+                                        <span class="fa fa-repeat"></span>
+                                        <span class="image-preview-input-title">
+                                        File Browse</span>
+                                        <input type="file" accept="image/png, image/jpeg, image/gif" name="photo"/>
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+
+                        <span class="col-sm-4">
+                                                    </span>
+                    </div>
+
+                    <div class="form-group ">
+                      
+                    </div>
+
+                    <div class="form-group ">
+                        
+                    </div>
+
+                    <div class='form-group' >                        <label for="username" class="col-sm-2 control-label">
+                            Username <span class="text-red">*</span>
+                        </label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="username" name="username" value="student1" >
+                        </div>
+                         <span class="col-sm-4 control-label">
+                                                    </span>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-8">
+                            <input type="submit" class="btn btn-success" value="Update Student" >
+                        </div>
+                    </div>
+
+                </form>
+
+            </div> <!-- col-sm-8 -->
+        </div><!-- row -->
+    </div><!-- Body -->
+</div><!-- /.box -->
+
+<script type="text/javascript">
+$( ".select2" ).select2();
+$('#dob').datepicker({ startView: 2 });
+
+$('#username').keyup(function() {
+    $(this).val($(this).val().replace(/\s/g, ''));
+});
+
+$('#classesID').change(function(event) {
+    var classesID = $(this).val();
+    if(classesID === '0') {
+        $('#classesID').val(0);
+    } else {
+        $.ajax({
+            type: 'POST',
+            url: "https://demo.inilabs.net/school/v4.7/student/sectioncall",
+            data: "id=" + classesID,
+            dataType: "html",
+            success: function(data) {
+               $('#sectionID').html(data);
+            }
+        });
+
+        $.ajax({
+            type: 'POST',
+            url: "https://demo.inilabs.net/school/v4.7/student/optionalsubjectcall",
+            data: "id=" + classesID,
+            dataType: "html",
+            success: function(data2) {
+                $('#optionalSubjectID').html(data2);
+            }
+        });
+    }
+});
+
+$(document).on('click', '#close-preview', function(){ 
+    $('.image-preview').popover('hide');
+    // Hover befor close the preview
+    $('.image-preview').hover(
+        function () {
+           $('.image-preview').popover('show');
+           $('.content').css('padding-bottom', '130px');
+        }, 
+         function () {
+           $('.image-preview').popover('hide');
+           $('.content').css('padding-bottom', '20px');
+        }
+    );    
+});
+
+$(function() {
+    // Create the close button
+    var closebtn = $('<button/>', {
+        type:"button",
+        text: 'x',
+        id: 'close-preview',
+        style: 'font-size: initial;',
+    });
+    closebtn.attr("class","close pull-right");
+    // Set the popover default content
+    $('.image-preview').popover({
+        trigger:'manual',
+        html:true,
+        title: "<strong>Preview</strong>"+$(closebtn)[0].outerHTML,
+        content: "There's no image",
+        placement:'bottom'
+    });
+    // Clear event
+    $('.image-preview-clear').click(function(){
+        $('.image-preview').attr("data-content","").popover('hide');
+        $('.image-preview-filename').val("");
+        $('.image-preview-clear').hide();
+        $('.image-preview-input input:file').val("");
+        $(".image-preview-input-title").text("File Browse"); 
+    }); 
+    // Create the preview image
+    $(".image-preview-input input:file").change(function (){     
+        var img = $('<img/>', {
+            id: 'dynamic',
+            width:250,
+            height:200,
+            overflow:'hidden'
+        });      
+        var file = this.files[0];
+        var reader = new FileReader();
+        // Set preview image into the popover data-content
+        reader.onload = function (e) {
+            $(".image-preview-input-title").text("File Browse");
+            $(".image-preview-clear").show();
+            $(".image-preview-filename").val(file.name);            
+            img.attr('src', e.target.result);
+            $(".image-preview").attr("data-content",$(img)[0].outerHTML).popover("show");
+            $('.content').css('padding-bottom', '130px');
+        }        
+        reader.readAsDataURL(file);
+    });  
+});
+
+
+</script>
+                    </div>
+                </div>
+            </section>
+        </aside>
+
+        <footer class="main-footer">
+          	<div class="pull-right hidden-xs">
+                	</div>
+          	<strong>Copyright &copy; </strong>
+        </footer>
+        </div>
+        <script type="text/javascript" src="https://demo.inilabs.net/school/v4.7/assets/bootstrap/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://demo.inilabs.net/school/v4.7/assets/inilabs/style.js"></script>
+        <script type="text/javascript" src="https://demo.inilabs.net/school/v4.7/assets/datatables/tools/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="https://demo.inilabs.net/school/v4.7/assets/datatables/tools/dataTables.buttons.min.js"></script>
+        <script type="text/javascript" src="https://demo.inilabs.net/school/v4.7/assets/datatables/tools/jszip.min.js"></script>
+        <script type="text/javascript" src="https://demo.inilabs.net/school/v4.7/assets/datatables/tools/pdfmake.min.js"></script>
+        <script type="text/javascript" src="https://demo.inilabs.net/school/v4.7/assets/datatables/tools/vfs_fonts.js"></script>
+        <script type="text/javascript" src="https://demo.inilabs.net/school/v4.7/assets/datatables/tools/buttons.html5.min.js"></script>
+        <script type="text/javascript" src="https://demo.inilabs.net/school/v4.7/assets/datatables/dataTables.bootstrap.js"></script>
+        <script type="text/javascript" src="https://demo.inilabs.net/school/v4.7/assets/inilabs/inilabs.js"></script>
+        <script type="text/javascript">
+          $(document).ready(function () {
+            $(document).ajaxStart(function () {
+              $("#loading").show();
+            }).ajaxStop(function () {
+              $("#loading").hide();
+            });
+          });
+
+          $(document).ready(function () {
+            $('#example3, #example1, #example2').DataTable({
+              dom : 'Bfrtip',
+              buttons : [
+                'copyHtml5',
+                'excelHtml5',
+                'csvHtml5',
+                'pdfHtml5'
+              ],
+              search : false
+            });
+          });
+        </script>
+
+        <script type="text/javascript">
+          $(function () {
+            $("#withoutBtn").dataTable();
+          });
+        </script>
+
+                
+                
+        <script type="text/javascript">
+            $("ul.sidebar-menu li").each(function() {
+                if($(this).attr('class') === 'active') {
+                    $(this).parents('li').addClass('active');
+                }
+            });
+
+            $(document).ready(function () {
+              setTimeout(function () {
+                $.ajax({
+                  type : 'GET',
+                  dataType : "html",
+                  async : false,
+                  url : "https://demo.inilabs.net/school/v4.7/alert/alert",
+                  success : function (data) {
+                    $(".my-push-message-list").html(data);
+                    var alertNumber = 0;
+                    $('.my-push-message-list li').each(function () {
+                      alertNumber++;
+                    });
+                    if (alertNumber > 0) {
+                      $('.my-push-message-ul').removeAttr('style');
+                      $('.my-push-message-a').append('<span class="label label-danger"><lable class="alert-image">' + alertNumber + '</lable> </span>');
+                      $('.my-push-message-number').html('You have ' + alertNumber + ' notifications');
+                    } else {
+                      $('.my-push-message-ul').remove();
+                    }
+                  }
+                });
+              }, 5000);
+            });
+        </script>
+    </body>
+</html>
+
+

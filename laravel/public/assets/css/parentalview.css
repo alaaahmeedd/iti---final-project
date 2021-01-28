@@ -1,0 +1,32 @@
+.childtitle
+{
+padding: 40px 0px;
+font-size: 46px;
+text-align: center;
+/* border: solid 1px black; */
+background-color: #f3f3f3;
+font-family: monospace;
+font-weight: 600;
+}
+.childtitle label{
+    font-size: 30px;
+}
+.childsubjects{
+
+    /* margin-top: 1%; */
+}
+.childsubjects p{
+    text-align: center;
+}
+.childsubjects meter{
+    width: 40%;
+    height: 10%;
+    float: right;
+    
+}
+meter::-webkit-meter-suboptimum-value{background:rgb(255, 0, 0);}
+.childsubjects .column{
+    background-color: #cecece ;
+    font-weight: 600;
+    font-size: 16px;
+}
